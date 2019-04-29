@@ -25,8 +25,8 @@ int main(void)
       usart_ini();  
 	  timer_ini();
 	
-      USARTSend((" Hello, i am Invertor!\r\n"));
-
+      USARTSend((" Hello!\r\n"));
+      USARTSend((" I am Invertor!\r\n"));
     while(1){ 
 //---ОБРАБОТКА ПРИНЯТЫХ С ПК ДАННЫХ----------------------------------------------------------
         if (RX_FLAG_END_LINE == 1) {				 
