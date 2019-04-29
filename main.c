@@ -29,7 +29,8 @@ int main(void)
       USARTSend((" I am Invertor!\r\n"));
     while(1){ 
 //---ОБРАБОТКА ПРИНЯТЫХ С ПК ДАННЫХ----------------------------------------------------------
-        if (RX_FLAG_END_LINE == 1) {				 
+        if (RX_FLAG_END_LINE == 1) {
+        USARTSend((" Zashol!\r\n"));            
 //		    if(strncmp(RX_BUF, "Fshim=\r\n", 6)==0){ 
 //			    USARTSend("COMMAND: Fshim=!\r\n");
 //				i=6;
