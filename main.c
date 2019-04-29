@@ -28,6 +28,7 @@ int main(void)
       USARTSend((" Hello, i am Invertor!\r\n"));
 
     while(1){ 
+         USARTSend((" TEST GIT!\r\n"));
 //---ОБРАБОТКА ПРИНЯТЫХ С ПК ДАННЫХ----------------------------------------------------------
         if (RX_FLAG_END_LINE == 1) {				 
 //		    if(strncmp(RX_BUF, "Fshim=\r\n", 6)==0){ 
