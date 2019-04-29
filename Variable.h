@@ -10,6 +10,6 @@ void variable_ini(void);
 //macross
 
 //constants
-#define POINT_ON_Tsin 100 //количество точек синуса
+#define POINT_ON_Tsin 200 //количество точек синуса
 #endif /*VARIABLE_H_*/
 
