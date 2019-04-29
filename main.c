@@ -29,12 +29,11 @@ int main(void)
 
     while(1){ 
 //---ОБРАБОТКА ПРИНЯТЫХ С ПК ДАННЫХ----------------------------------------------------------
-<<<<<<< HEAD
         if (RX_FLAG_END_LINE == 1) {				 
 //		    if(strncmp(RX_BUF, "Fshim=\r\n", 6)==0){ 
 //			    USARTSend("COMMAND: Fshim=!\r\n");
-//				    i=6;
-//				    while(RX_BUF[i]!='\0'){
+//				i=6;
+//				while(RX_BUF[i]!='\0'){
 //				    NumRX[i-6]=RX_BUF[i];
 //					i++;
 //			        }
@@ -44,57 +43,22 @@ int main(void)
 //			    Spi2_Read_Send_Data(MAINsendFshim, ALLSLAVE);
 //			    Spi2_Read_Send_Data(round(Fshim/8), ALLSLAVE);//МАКСИМАЛЬНОЕ ЧИСЛО 32767*4=131068 которое можно отправить через данную функцию 
 //		    }							 
-            if(strncmp(RX_BUF, "CLB\r\n", 5)==0){
-                USARTSend("COMMAND: Sensors Calibratcscion!\r\n");
-                //Calibration=ON;
-            }
+//            if(strncmp(RX_BUF, "CLB\r\n", 5)==0){
+//                USARTSend("COMMAND: Sensors Calibratcscion!\r\n");
+//                //Calibration=ON;
+//            }
 //		    if(strncmp(RX_BUF, "STOP\r\n", 6)==0){
 //		        USARTSend("COMMAND: STOP!\r\n");
 //			    Spi2_Read_Send_Data(MAINsendSTOP, ALLSLAVE);// Отправляем запрос стопа
 //			    Mode=STOP;				 
 //		    }		 
-//		    if(strncmp(RX_BUF, "START\r\n", 7)==0){
-//		        USARTSend("COMMAND: START!\r\n");
-//			    Spi2_Read_Send_Data(MAINsendSTART, ALLSLAVE);// Отправляем запрос старта
-//			    Set_point_Current_Channel=0;
-//			    Delta=0;
-//			    Mode=START;							 
-//		    }
+		    if(strncmp(RX_BUF, "START\r\n", 7)==0){
+		        USARTSend("COMMAND: START!\r\n");
+			    //Mode=START;							 
+		    }
             RX_FLAG_END_LINE = 0;		
             clear_RXBuffer();
         }
-=======
-				if (RX_FLAG_END_LINE == 1) {				 
-//							if(strncmp(RX_BUF, "Fshim=\r\n", 6)==0){ 
-//										USARTSend("COMMAND: Fshim=!\r\n");
-//										i=6;
-//										while(RX_BUF[i]!='\0'){
-//													NumRX[i-6]=RX_BUF[i];
-//													i++;
-//										}
-//										Fshim = atoi(NumRX);		
-//										sprintf(buffer, "Fshim=%d\r\n", Fshim);
-//										USARTSend(buffer);
-//									  Spi2_Read_Send_Data(MAINsendFshim, ALLSLAVE);
-//										Spi2_Read_Send_Data(round(Fshim/8), ALLSLAVE);//МАКСИМАЛЬНОЕ ЧИСЛО 32767*4=131068 которое можно отправить через данную функцию 
-//							}							 
-//							if(strncmp(RX_BUF, "CLB\r\n", 5)==0){
-//										USARTSend("COMMAND: Sensors Calibratcscion!\r\n");
-//										//Calibration=ON;
-//							}
-//							if(strncmp(RX_BUF, "STOP\r\n", 6)==0){
-//									  USARTSend("COMMAND: STOP!\r\n");
-//									  Spi2_Read_Send_Data(MAINsendSTOP, ALLSLAVE);// Отправляем запрос стопа
-//									  Mode=STOP;				 
-//							}		 
- 							if(strncmp(RX_BUF, "START\r\n", 7)==0){
-                                USARTSend("COMMAND: START!\r\n");
-							    //Mode=START;							 
-							}
-    				        RX_FLAG_END_LINE = 0;		
-							clear_RXBuffer();
-				}
->>>>>>> ADD_COMAND_USART
 //------------------------------------------------------------------------------ОБРАБОТКА ПРИНЯТЫХ С ПК ДАННЫХ		
     }//конец основного while
     
