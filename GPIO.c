@@ -2,6 +2,7 @@
 
 void rcc_ini(void)
 {
+      RCC->APB2ENR |= (1); //Активация тактирования Альтернативных функций в enable register     
 	  RCC->APB2ENR |= (1<<4); //Активация тактирования GPIOC в enable register
 	  //RCC->APB2ENR |= (1<<2); //Активация тактирования GPIOA в enable register
 }

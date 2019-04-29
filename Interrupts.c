@@ -34,14 +34,14 @@ void TIM3_IRQHandler(void)
   }
 }
 
-void USART1_IRQHandler(void) //обработчик прерываний
+void USART3_IRQHandler(void) //обработчик прерываний
 {
 	  char RXc;
 	
-    if ((USART1->SR & USART_FLAG_RXNE) != (u16)RESET) //убеждаемся, что прилетел байт
+    if ((USART3->SR & USART_FLAG_RXNE) != (u16)RESET) //убеждаемся, что прилетел байт
     {
 			  //__disable_irq();
-        RXc = USART_ReceiveData(USART1);
+        RXc = USART_ReceiveData(USART3);
         RX_BUF[RXi] = RXc;
         RXi++;
  
@@ -54,7 +54,7 @@ void USART1_IRQHandler(void) //обработчик прерываний
 						RX_FLAG_END_LINE = 1;
 			  }
         //Echo
-        USART_SendData(USART1, RXc);			    
+        USART_SendData(USART3, RXc);			    
     }
 		
 }
