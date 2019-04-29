@@ -10,6 +10,6 @@ void variable_ini(void);
 //macross
 
 //constants
-#define POINT_ON_Tsin 100
+#define POINT_ON_Tsin 200
 #endif /*VARIABLE_H_*/
 
