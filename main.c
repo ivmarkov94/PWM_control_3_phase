@@ -31,7 +31,11 @@ int main(void)
          USARTSend((" TEST GIT!\r\n"));
 //---ОБРАБОТКА ПРИНЯТЫХ С ПК ДАННЫХ----------------------------------------------------------
         if (RX_FLAG_END_LINE == 1) {
+<<<<<<< HEAD
         USARTSend((" ZasholMASTER!\r\n"));            
+=======
+        USARTSend((" Zashol TEST2!\r\n"));            
+>>>>>>> TEST2
 //		    if(strncmp(RX_BUF, "Fshim=\r\n", 6)==0){ 
 //			    USARTSend("COMMAND: Fshim=!\r\n");
 //				i=6;
